@@ -1,0 +1,70 @@
+.root{
+    --fuente-primaria:"Josefin Sans",sans-serif;
+    --fuente-secundaria:"Sevillana",sans-serif;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans&family=Sevillana&display=swap');
+
+* {
+    padding: 0;/*buscar alejar el contenido del borde la pagina*/
+    margin: 0;
+
+}
+
+head{
+}
+body{
+    display:grid;
+    box-sizing: border-box;
+    align-items: center;
+    color: rgba(255, 255, 0, 0.904);
+}
+video {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit:fill;
+    z-index: -1; /* Video detrás del contenido */
+}
+.container{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    border-radius: ;
+}
+
+
+
+.logo{
+    margin-left: auto;
+    
+}
+
+.contenido{
+    font-family: var(--fuente-primaria);
+}
+
+
+.contenido__interaccion{
+
+
+}
+
+
+.contenido__contenedor{
+    font-family: var(--fuente-secundaria);
+}
+
+.contenido__contenedor_interaccion{
+
+
+}
+
+.script{
+
+}
+
+.pie__de_pagina{
+
+}
