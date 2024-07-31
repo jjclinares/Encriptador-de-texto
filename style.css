@@ -1,70 +1,117 @@
-.root{
-    --fuente-primaria:"Josefin Sans",sans-serif;
-    --fuente-secundaria:"Sevillana",sans-serif;
-}
-
 @import url('https://fonts.googleapis.com/css2?family=Josefin+Sans&family=Sevillana&display=swap');
 
+:root {
+    --color-primario: #0C0C0C;
+    --color-secundario: #D4FBFF;
+    --color-terciario: #94C5EF;
+    --color-cuaternario: #FFFFFF;
+
+    --fuente-primaria: "Josefin Sans", sans-serif;
+    --fuente-secundaria: "Sevillana", sans-serif;
+}
+
 * {
-    padding: 0;/*buscar alejar el contenido del borde la pagina*/
-    margin: 0;
-
+    padding: 0; /* eliminar el padding */
+    margin: 0; /* eliminar el margin */
 }
 
-head{
+head {
+    font-family: var(--fuente-primaria);
+    font-size: 2rem;
 }
-body{
-    display:grid;
-    box-sizing: border-box;
-    align-items: center;
-    color: rgba(255, 255, 0, 0.904);
+
+.cybertheme {
+    background-image: url(./assets/img2.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: var(--color-primario);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
 }
-video {
+
+/*video {
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    object-fit:fill;
-    z-index: -1; /* Video detrás del contenido */
+    object-fit: fill;
+    z-index: -1; 
+} /* Video detrás del contenido */
+
+.container {
+    display: flex;
+    flex: auto;
+    justify-content: space-around;
+    align-items: center;
 }
-.container{
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    border-radius: ;
-}
 
-
-
-.logo{
+.logo {
     margin-left: auto;
-    
+    display: flex;
+    align-items: center;    
 }
 
-.contenido{
+.contenido {
+    font-family: var(--fuente-primaria);
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: normal;
+    height: 100%;
+}
+
+textarea {
+    resize: none;
+    background-color: var(--color-secundario);
+    font-size: 1.5rem;
+}
+
+.contenido__condicion {
+    font-family: var(--fuente-primaria);
+    font-size: 1rem;
+    background-color: var(--color-terciario);
+}
+
+.contenido__interaccion {
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+}
+
+.contenido__contenedor {
     font-family: var(--fuente-primaria);
 }
 
-
-.contenido__interaccion{
-
-
+.contenido__contenedor img {
+    margin-bottom: 5%;
 }
 
-
-.contenido__contenedor{
-    font-family: var(--fuente-secundaria);
+.contenido__contenedor_interaccion {
+    margin-top: 20px;
+    display: flex;
+    justify-content: left;
+    width: 100%;
 }
 
-.contenido__contenedor_interaccion{
-
-
+.script {
+    /* Añade tu código JavaScript aquí si es necesario */
 }
 
-.script{
-
+.pie__de_pagina {
+    text-align: center;
+    padding: 0.5%;
+    background-color: var(--color-cuaternario);  
 }
 
-.pie__de_pagina{
-
+@media (max-width: 1023px) {
+    .cybertheme {
+        background-size: cover;
+    }
+    .container {
+        flex-direction: column;
+    }
 }

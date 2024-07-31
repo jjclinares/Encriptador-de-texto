@@ -7,22 +7,19 @@
     <link rel="stylesheet" href="style.css">
     <title>Encriptador de Texto</title>
 </head>
-<body>
-    <video autoplay loop muted>
-        <source src="./assets/fireworks.mp4" type="video/mp4">
-    </video>
+<body class="cybertheme">
     <header>
         <div class="logo">
-            <img src="./assets/Logo_Alura.png" alt="Logo de Alura Latam">
+            <img src="./assets/img1.png" alt="Logo de Alura Latam">
             <h1>Encriptador de Texto</h1>
         </div>
     </header>
     <div class="container">
         <section>
             <div class="contenido">
-                <textarea id="areaTexto" name="areaTexto" required="" placeholder="Ingrese el texto aqui"
-                maxlength="100" minlength="1" cols="50"> </textarea>
-                <p>Solo letras minúsculas y sin acentos</p>
+                <textarea id="areaTexto" name="areaTexto" placeholder="Ingrese el texto aqui" required="" 
+                maxlength="100" minlength="1" autocapitalize="none" rows="10" cols="30"> </textarea>
+                <p class="contenido__condicion">Solo letras minúsculas y sin acentos</p>
             </div>
             <div class="contenido__interaccion">
                 <button type="submit">Encriptar</button>
@@ -31,7 +28,7 @@
         </section>
         <section>
             <div class="contenido__contenedor">
-                <img src="./assets/investigator-Guy-Fawkes.jpg" alt="Dibujo de Detective buscador" >
+                <img src="./assets/img3.jpg" width="400" alt="Dibujo de Detective buscador" >
                 <h2>Ningún mensaje fue encontrado</h2>
                 <p>Ingresa el texto que desees encriptar o desencriptar.</p>
             </div>
@@ -41,7 +38,7 @@
         </section>
     </div>
     <script>
-        document.getElementById("myDIV").style.display = "none";
+        document.getElementById("myDIV").style.display="none";
     </script>
     <footer class="pie__de_pagina">
         <p>Desarrolado por Jamer Linares</p>
