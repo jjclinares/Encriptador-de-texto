@@ -17,28 +17,28 @@
     <div class="container">
         <section>
             <div class="contenido">
-                <textarea id="areaTexto" name="areaTexto" placeholder="Ingrese el texto aqui" required="" 
-                maxlength="100" minlength="1" autocapitalize="none" rows="10" cols="30"> </textarea>
+                <textarea id="areaTexto" name="areaTexto" placeholder="Ingrese el texto aquí" required=""
+                maxlength="100" minlength="1" autocapitalize="none" rows="10" cols="30"></textarea>
                 <p class="contenido__condicion">Solo letras minúsculas y sin acentos</p>
             </div>
             <div class="contenido__interaccion">
-                <button type="submit">Encriptar</button>
-                <button type="submit">Desencriptar</button>
+                <button class="encrypt" type="submit">Encriptar</button>
+                <button class="decrypt" type="submit">Desencriptar</button>
             </div>
         </section>
         <section>
-            <div class="contenido__contenedor">
-                <img src="./assets/img3.jpg" width="400" alt="Dibujo de Detective buscador" >
+            <div class="result">
+                <img src="./assets/img3.jpg" width="400" alt="looking for">
                 <h2>Ningún mensaje fue encontrado</h2>
                 <p>Ingresa el texto que desees encriptar o desencriptar.</p>
             </div>
-            <div class="contenido__contenedor_interaccion">
-                <button type="submit" >copiar</button>
+            <div class="copy">
+                <button type="submit">Copiar</button>
             </div>
         </section>
     </div>
     <footer class="pie__de_pagina">
-        <p>Desarrolado por Jamer Linares</p>
+        <p>&copy;Desarrollado por Jamer Linares</p>
     </footer>
     <script src="app.js"></script>
 </body>
