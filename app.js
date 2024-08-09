@@ -37,8 +37,8 @@ function encriptar(texto) {
         return;
     } else {
         let textoEncriptado = texto
-            .replace(/a/gi, 'ai') /*Las barras / indican que se está utilizando una expresión regular*/
-            .replace(/e/gi, 'enter') /*g significa "global"*/
+            .replace(/a/gi, 'ai') //Las barras / indican que se está utilizando una expresión regular
+            .replace(/e/gi, 'enter') //g significa "global"
             .replace(/i/gi, 'imes')
             .replace(/o/gi, 'ober')
             .replace(/u/gi, 'ufat');
