@@ -1,11 +1,4 @@
 /*seleccionar elementos HTML por su etiqueta, clase o ID.*/
-const themeOne = document.querySelector('.cybertheme'); 
-const head = document.querySelector('.logo');
-const containerBox = document.querySelector('.container');
-const textEncrypt = document.querySelector('.contenido');
-const foot = document.querySelector('.pie__de_pagina');
-
-
 const textArea = document.querySelector('#areaTexto');
 const buttonEncrypt = document.querySelector('.encrypt');
 const buttonDecrypt = document.querySelector('.decrypt');
@@ -28,34 +21,73 @@ function mostrarResultado(texto) {
     resultArea.textContent = texto;
 }
 
+// Encriptar texto iterando por carácter
 function encriptar(texto) {
-    if (typeof texto !== 'string' || !/^[a-z]+$/.test(texto)) {
-        /*:^[a-z]+$: Coincide con cadenas que consisten únicamente en letras minúsculas sin acentos.
-        /.test(texto): Comprueba si texto cumple con esta condición.
-        !: Invierte el resultado. si texto contiene algo que no sea letras minúsculas sin acentos, el resultado será true. */
+    if (typeof texto !== 'string' || !/^[a-z\s]+$/.test(texto)) {
+        //  :^[a-z]+$: Coincide con cadenas que consisten únicamente en letras minúsculas sin acentos.
+        //  \s:espacios.
+        //  /.test(texto): Comprueba si texto cumple con esta condición.
+        //  !: Invierte el resultado. si texto contiene algo que no sea letras minúsculas sin acentos,
+        //  el resultado será true. 
         alert('Por favor, digite solo letras minúsculas y sin acentos');
         return;
     } else {
-        let textoEncriptado = texto
-            .replace(/a/gi, 'ai') //Las barras / indican que se está utilizando una expresión regular
-            .replace(/e/gi, 'enter') //g significa "global"
-            .replace(/i/gi, 'imes')
-            .replace(/o/gi, 'ober')
-            .replace(/u/gi, 'ufat');
-        mostrarResultado(textoEncriptado);
+        let textoEncriptado = '';
+        for (let char of texto) {
+            switch (char) {
+                case 'a':
+                    textoEncriptado += 'ai';
+                    break;
+                case 'e':
+                    textoEncriptado += 'enter';
+                    break;
+                case 'i':
+                    textoEncriptado += 'imes';
+                    break;
+                case 'o':
+                    textoEncriptado += 'ober';
+                    break;
+                case 'u':
+                    textoEncriptado += 'ufat';
+                    break;
+                default:
+                    textoEncriptado += char;
+                    break;
+            }
+        }
+    mostrarResultado(textoEncriptado);
     }
 }
 
 
+
+// Desencripta el texto iterando por cada carácter
 function desencriptar(texto) {
-    let textoDesencriptado = texto
-        .replace(/ai/gi, 'a')
-        .replace(/enter/gi, 'e')
-        .replace(/imes/gi, 'i')
-        .replace(/ober/gi, 'o')
-        .replace(/ufat/gi, 'u');
+    let textoDesencriptado = '';
+    for (let i = 0; i < texto.length; i++) {
+        if (texto.startsWith('ai', i)) {
+            textoDesencriptado += 'a';
+            i += 1; // Saltar los caracteres ya procesados
+        } else if (texto.startsWith('enter', i)) {
+            textoDesencriptado += 'e';
+            i += 4;
+        } else if (texto.startsWith('imes', i)) {
+            textoDesencriptado += 'i';
+            i += 3;
+        } else if (texto.startsWith('ober', i)) {
+            textoDesencriptado += 'o';
+            i += 3;
+        } else if (texto.startsWith('ufat', i)) {
+            textoDesencriptado += 'u';
+            i += 3;
+        } else {
+            textoDesencriptado += texto[i];
+        }
+    }
+
     mostrarResultado(textoDesencriptado);
 }
+
 
 
 
