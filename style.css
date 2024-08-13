@@ -5,26 +5,23 @@
     --color-secundario: #D4FBFF;
     --color-terciario:  #94C5EF ;
     --color-cuaternario: #FFFFFF;
-
     --fuente-primaria: "Josefin Sans", sans-serif;
     --fuente-secundaria: "Sevillana", sans-serif;
 }
 
 * {
-    padding: 0; /* eliminar el padding */
-    margin: 0; /* eliminar el margen */
+    font-family: var(--fuente-primaria);
+    padding: 0; 
+    margin: 0; 
     box-sizing:border-box;
 }
 
 body {
     width: 100%;
-    background-clip: inherit;
-    background-size: cover;
-    border-radius: 20px;
-    border: 3px solid #0C0C0C;
     min-height: 100vh;
     display: flex;
     flex-direction: column;
+    font-size: 1rem; 
 }
 
 video {
@@ -38,27 +35,37 @@ video {
 } /* Video detrás del contenido */
 
 header {
-    width: 100%;
     display: flex;
-    padding: 15px 20px;
-    align-items:center;
+    background-color: none;
+    background-size: cover;
+    z-index: 1;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    padding: 0.1rem;
+    text-align:center; 
+}
 
+header div {
+    display: flex;
+    flex-direction:row; 
+    align-items:center; 
 }
 
 .header__Logo{
+    margin-bottom: 0.1rem
 
 }
 
-.tipo__tema{
-    
-
-}
 .header__titulo{
-    font-family: var(--fuente-primaria);
     font-size: 1.5rem;
-    border-radius: 10px;
+    margin-bottom: 0.5rem;
 }
 
+.header__tema{
+    display: flex;
+    margin-top: 0.5rem;
+}
 
 
 .container {
@@ -69,24 +76,38 @@ header {
 }
 
 
+textarea ,.result {
+    display: flex;
+    position: relative;
+    resize:none;
+    justify-content:center;
+    border-color: solid #FFFFFF;
+    width: 100%;
+    max-width: 100%;
+    font-size: 1.25rem;
+    box-sizing: border-box;
+}
 
-.contenido {
-    font-family: var(--fuente-primaria);
+
+
+.result {
+    background-color: var(--color-cuaternario);
+    z-index: 1;
+ } /* Ajusta este valor según sea necesario */
+    
+    /*font-family: var(--fuente-primaria);
+    border-radius: 10px;
+    background-color: var(--color-secundario);
+    font-size: 1.5rem;
+    box-shadow: 4px 4px 20px 0px rgba(1, 8, 14, 0.15);*/
+    /*border-radius: 10px;
     display: flex;
     width: 100%;
     flex-direction: column;
     justify-content: center;
-    height: 100%;
-}
-
-textarea {
-    font-family: var(--fuente-primaria);
-    border-radius: 10px;
-    resize: none;
-    background-color: var(--color-secundario);
+    border-image:fill;
     font-size: 1.5rem;
-    box-shadow: 4px 4px 20px 0px rgba(1, 8, 14, 0.15);
-}
+    box-shadow: 4px 4px 20px 0px rgba(1, 8, 14, 0.15);*/
 
 .contenido__condicion {
     font-family: var(--fuente-primaria);
@@ -94,30 +115,18 @@ textarea {
     background-color: var(--color-terciario);
 }
 
-.contenido__interaccion {
-    margin-top: 20px;
+.contenido__interaccion{
+    
+}
+
+button,.contenido__interaccion,.copy {
     display: flex;
-    justify-content: space-around;
-    width: 100%;
-}
-
-.result {
-    background-color: var(--color-secundario);
-    font-family: var(--fuente-primaria);
-    border-radius: 10px;
-    font-size: 1.5rem;
-    box-shadow: 4px 4px 20px 0px rgba(1, 8, 14, 0.15);
-}
-
-.result image{
-    border-image: 20px;
-}
-
-.copy {
-    margin-top: 20px;
-    display: flex;
-    justify-content: left;
-    width: 100%;
+    justify-content:center;
+    width: auto;
+    cursor:pointer;
+    font-size: 1rem;
+    border-radius: 50px;
+    padding: 1rem 2rem ;
 }
 
 .pie__de_pagina {
@@ -127,16 +136,33 @@ textarea {
     border-radius: 20px;
 }
 
-.script {
-    /* Añade tu código JavaScript aquí si es necesario */
-}
-
-@media (max-width: 1023px) {
-    .cybertheme {
-        background-size: cover;
-    }
+@media (max-width: 768px) {
     .container {
         flex-direction: column;
+    }
+    textarea, .result {
+        font-size: 1rem;
+    }
+    button {
+        width: 80%;
+        font-size: 0.875rem;
+    }
+}
+
+@media (max-width: 480px) {
+    header {
+        flex-direction: column;
+        align-items: center;
+    }
+    .header__titulo {
+        font-size: 1.25rem;
+    }
+    textarea, .result {
+        font-size: 0.875rem;
+    }
+    button {
+        width: 100%;
+        font-size: 0.75rem;
     }
 }
 
