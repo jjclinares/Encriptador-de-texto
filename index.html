@@ -13,7 +13,6 @@
     </video>
     <header>
         <div>
-            <img class="header__Logo" src="./assets/img1.png" alt="Logo Alura Latam">
             <h1 class="header__titulo">Encriptador de Texto</h1>
             <select id="header__tema" onchange="tipoDeTema()">
                 <option value="" selected>Tema Claro</option>
@@ -26,6 +25,7 @@
             <div class="contenido">
                 <textarea id="areaTexto" name="areaTexto" placeholder="&#9;Ingrese el texto aquí" required=""
                 maxlength="100" minlength="1" autocapitalize="none" rows="10" cols="30"></textarea>
+                <lt-div class="lt-toolbar status-icon lt-toolbar status-icon--has-no-errors"></lt-div>
                 <p class="contenido__condicion">Solo letras minúsculas y sin acentos</p>
             </div>
             <div class="contenido__interaccion">
@@ -44,8 +44,21 @@
         </section>
     </div>
     <footer class="pie__de_pagina">
-        <p>&copy;Desarrollado por Jamer Linares</p>
+        <p>&copy;Desarrollado por <strong>Jamer Linares-2024</strong></p>
+        <div class="enlaces">
+            <a target="_blank" href="https://github.com/jjclinares"><img src="./assets/github.png" alt="Github del Desarrollador" > </a>
+            <a target="_blank" href="https://www.linkedin.com/in/jamer-linares-tec/"><img src="./assets/linkedin.png"alt="Linkedin del Desarrollador"> </a>
+            <a target="_blank" href="https://app.aluracursos.com/user/jamer-linares"><img src="./assets/alura.png" weight="20" height="30" alt="Alura del Desarrollador"> </a>
+        </div>
     </footer>
     <script src="app.js"></script>
+    <script>
+        window.addEventListener('load', function() {
+            new window.LanguageToolEmbed({
+            container: document.getElementById("areaTexto"),
+            apiUrl: 'https://api.languagetoolplus.com'  // Usar el servidor LanguageTool
+            });
+        });
+    </script>
 </body>
 </html>
