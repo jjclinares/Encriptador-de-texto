@@ -1,61 +1,76 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang='es'>
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
+    <meta charset='UTF-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+    <link id='theme-link' rel='stylesheet' href='./styles/style.css'>
     <title>Encriptador de Texto</title>
 </head>
 <body>
-    <video autoplay loop muted>
-        <source src="./assets/MPGE4.mp4" type="video/mp4">
+    <!-- Video de Fondo -->
+    <video id='videoBackground' autoplay loop muted >
+        <source src='./assets/defaultVideo.mp4' type='video/mp4'> 
     </video>
+
+    <!-- Encabezado -->
     <header>
         <div>
-            <h1 class="header__titulo">Encriptador de Texto</h1>
-            <select id="header__tema" onchange="tipoDeTema()">
-                <option value="" selected>Tema Claro</option>
-                <option value="./darkStyle.css">Tema Oscuro</option>
+            <h1 class='header__titulo'>Encriptador de Texto</h1>
+            <select id='header__tema' onchange='cambiarTema()'>
+                <option value='light' selected>Tema Claro</option>
+                <option value='dark'>Tema Oscuro</option>
             </select>
         </div>
     </header>
-    <div class="container">
+
+    <!-- Contenedor Principal -->
+    <div class='container'>
         <section>
-            <div class="contenido">
-                <textarea id="areaTexto" name="areaTexto" placeholder="&#9;Ingrese el texto aquí" required=""
-                maxlength="100" minlength="1" autocapitalize="none" rows="10" cols="30"></textarea>
-                <lt-div class="lt-toolbar status-icon lt-toolbar status-icon--has-no-errors"></lt-div>
-                <p class="contenido__condicion">Solo letras minúsculas y sin acentos</p>
+            <!-- Área de Texto para Encriptar -->
+            <div class='contenido'>
+                <textarea id='areaTexto' name='areaTexto' placeholder='Ingrese el texto aquí' required
+                maxlength='1000' autocapitalize='none' rows='10' cols='30'></textarea>
+                <lt-div class='lt-toolbar status-icon lt-toolbar status-icon--has-no-errors'></lt-div>
+                <p class='contenido__condicion'>Solo letras minúsculas y sin acentos</p>
             </div>
-            <div class="contenido__interaccion">
-                <button class="encrypt" type="submit">Encriptar</button>
-                <button class="decrypt" type="submit">Desencriptar</button>
+
+            <!-- Botones de Interacción -->
+            <div class='contenido__interaccion'>
+                <button class='encrypt' type='button'>Encriptar</button>
+                <button class='decrypt' type='button'>Desencriptar</button>
             </div>
         </section>
+
         <section>
-            <div class="result">
-                <textarea id="result" name="result" readonly="" placeholder="Ningún mensaje fue encontrado &#10;Ingresa el texto que desees&#9;encriptar o desencriptar"
-                rows="10" cols="30"></textarea>
+            <!-- Resultado de la Encriptación/Desencriptación -->
+            <div class='result'>
+                <textarea id='result' name='result' readonly placeholder='Ningún mensaje fue encontrado &#10;Ingresa el texto que desees encriptar o desencriptar'
+                rows='10' cols='30'></textarea>
             </div>
-            <div class="copy">
-                <button type="submit">Copiar</button>
+            <!-- Botón para Copiar Texto -->
+            <div class='copy'>
+                <button type='button'>Copiar</button>
             </div>
         </section>
     </div>
-    <footer class="pie__de_pagina">
-        <p>&copy;Desarrollado por <strong>Jamer Linares-2024</strong></p>
-        <div class="enlaces">
-            <a target="_blank" href="https://github.com/jjclinares"><img src="./assets/github.png" alt="Github del Desarrollador" > </a>
-            <a target="_blank" href="https://www.linkedin.com/in/jamer-linares-tec/"><img src="./assets/linkedin.png"alt="Linkedin del Desarrollador"> </a>
-            <a target="_blank" href="https://app.aluracursos.com/user/jamer-linares"><img src="./assets/alura.png" weight="20" height="30" alt="Alura del Desarrollador"> </a>
+
+    <!-- Pie de Página -->
+    <footer class='pie__de_pagina'>
+        <p>&copy;Desarrollado por <strong>Jamer Linares</strong> - 2024</p>
+        <div class='enlaces'>
+            <a target='_blank' href='https://github.com/jjclinares'><img src='./assets/github.png' alt='Github del Desarrollador' > </a>
+            <a target='_blank' href='https://www.linkedin.com/in/jamer-linares-tec/'><img src='./assets/linkedin.png'alt='Linkedin del Desarrollador'> </a>
+            <a target='_blank' href='https://app.aluracursos.com/user/jamer-linares'><img src='./assets/alura.png' weight='20' height='30' alt='Alura del Desarrollador'> </a>
         </div>
     </footer>
-    <script src="app.js"></script>
+
+    <!-- Archivo JavaScript -->
+    <script src='app.js'></script>
     <script>
-        window.addEventListener('load', function() {
+            window.addEventListener('load', function() {
             new window.LanguageToolEmbed({
-            container: document.getElementById("areaTexto"),
+            container: document.getElementById('areaTexto'),
             apiUrl: 'https://api.languagetoolplus.com'  // Usar el servidor LanguageTool
             });
         });
