@@ -3,7 +3,7 @@
 
 [This site was built using [GitHub Pages and Visual Studio Code]
 
-![Logo Oracle ONE alura ](./aluraoracle.png)!
+![Logo Oracle ONE alura ](./readme/aluraoracle.png)!
 
 Ante la necesidad de transmitir información escrita de manera privada nace el mensaje encriptado.Buscando suplir esta necesidad nace esta pagina web, la cual toma un mensaje **INICIAL** del emisor el cual cambiara sus vocales con el fin de proteger la información, hasta que llegue a las manos del receptor quien usando la pagina web Desencriptara el mensaje **FINAL*.  
 
@@ -43,5 +43,5 @@ gaitober" => "gato"
 
 #### Resultado
 
-![Imagen Pagina web del Encriptador ](./Evidencia-pagina-web.png)!
+![Imagen Pagina web del Encriptador ](./readme/Evidencia-pagina-web.png)!
 
