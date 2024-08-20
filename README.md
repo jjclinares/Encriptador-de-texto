@@ -1,7 +1,7 @@
 # <h1 align='center'> Encriptador-de-texto ORACLE alura</h1>
 -git status: ended
 
-This site was built using [GitHub Pages and Visual Studio Code]
+[This site was built using [GitHub Pages and Visual Studio Code]
 
 ![Logo Oracle ONE alura ](./readme/aluraOracle.png)!
 
