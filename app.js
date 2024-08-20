@@ -138,7 +138,7 @@ function cambiarTema() {
     const temaSeleccionado = selectTema.value;
     
     if (temaSeleccionado === 'dark') {
-        link.href = './styles/darkstyle.css'; 
+        link.href = './styles/darkStyle.css'; 
         document.getElementById('videoBackground').querySelector('source').src = './assets/darkThemeVideo.mp4';
         localStorage.setItem('theme', 'dark'); // Guarda la preferencia en localStorage
     } else {
@@ -152,10 +152,10 @@ function cambiarTema() {
 
 // Inicializa el tema basado en la preferencia guardada o el tema predeterminado (light)
 function inicializarTema() {
-    const temaGuardado = localStorage.getItem('theme') || 'dark';
+    const temaGuardado = localStorage.getItem('theme') || 'light';
 
     if (temaGuardado === 'dark') {
-        link.href = './styles/darkstyle.css';
+        link.href = './styles/darkStyle.css';
         document.getElementById('videoBackground').querySelector('source').src = './assets/darkThemeVideo.mp4';
         selectTema.value = 'dark';
     } else {

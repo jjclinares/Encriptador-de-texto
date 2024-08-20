@@ -1,9 +1,9 @@
-# <h1 align="center"> Encriptador-de-texto ORACLE alura</h1>
+# <h1 align='center'> Encriptador-de-texto ORACLE alura</h1>
 -git status: ended
 
-[This site was built using [GitHub Pages and Visual Studio Code]
+This site was built using [GitHub Pages and Visual Studio Code]
 
-![Logo Oracle ONE alura ](./readme/aluraoracle.png)!
+![Logo Oracle ONE alura ](./readme/aluraOracle.png)!
 
 Ante la necesidad de transmitir información escrita de manera privada nace el mensaje encriptado.Buscando suplir esta necesidad nace esta pagina web, la cual toma un mensaje **INICIAL** del emisor el cual cambiara sus vocales con el fin de proteger la información, hasta que llegue a las manos del receptor quien usando la pagina web Desencriptara el mensaje **FINAL*.  
 
@@ -17,11 +17,11 @@ Vamos a trabajar en una aplicación que encripta textos, así podrás intercambi
 
 Las "llaves" de encriptación que utilizaremos son las siguientes:
 
-La letra "e" es convertida para "enter"
-La letra "i" es convertida para "imes"
-La letra "a" es convertida para "ai"
-La letra "o" es convertida para "ober"
-La letra "u" es convertida para "ufat"
+La letra 'e' es convertida para 'enter'
+La letra 'i' es convertida para 'imes'
+La letra 'a' es convertida para 'ai'
+La letra 'o' es convertida para 'ober'
+La letra 'u' es convertida para 'ufat'
 
 ### Requisitos:
 
@@ -30,8 +30,8 @@ La letra "u" es convertida para "ufat"
     Debe ser posible convertir una palabra para la versión encriptada también devolver una palabra encriptada para su versión original.
 
 Por ejemplo:
-"gato" => "gaitober"
-gaitober" => "gato"
+'gato' => 'gaitober'
+'gaitober' => 'gato'
 
     La página debe tener campos para
     inserción del texto que será encriptado o desencriptado, y el usuario debe poder escoger entre las dos opciones.
@@ -43,5 +43,5 @@ gaitober" => "gato"
 
 #### Resultado
 
-![Imagen Pagina web del Encriptador ](./readme/Evidencia-pagina-web.png)!
+![Imagen Pagina web del Encriptador ](./readme/EvidenciaPaginaWeb.png)!
 
